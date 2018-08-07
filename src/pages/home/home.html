@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Authentication Using Firebase
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content fullscreen class="buttonPage">
+  <div class="folder">
+    <h1>Select How You Want to Authenticate!</h1>
+    <div class="loginButtonHolder">
+      <button ion-button color="light" (click)="login()">Email & Password</button>
+      <button ion-button color="google">Google</button>
+      <button ion-button color="twitter">Twitter</button>
+      <button ion-button color="facebook">Facebook</button>
+      <button ion-button color="github">GitHub</button>
+      <div class="create">Don't have an account?</div>
+      <p class="btn create" (click)="signUpUsers()">Create One.</p>
+    </div>
+  </div>
+</ion-content>

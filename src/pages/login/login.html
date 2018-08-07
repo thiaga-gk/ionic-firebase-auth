@@ -1,0 +1,25 @@
+<!--<ion-header>-->
+
+<!--<ion-navbar>-->
+<!--<ion-title>Login</ion-title>-->
+<!--</ion-navbar>-->
+
+<!--</ion-header>-->
+
+
+<ion-content fullscreen padding>
+  <div class="formHolder">
+    <h1 style="text-align: center">Login to the Todo List</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="loginSubmitForm()">
+      <ion-item>
+        <ion-label floating>Email Address</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <button ion-button class="submitBtn" full type="submit" [disabled]="!loginForm.valid">Login</button>
+    </form>
+  </div>
+</ion-content>

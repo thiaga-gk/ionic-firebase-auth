@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Create Account</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content fullscreen padding>
+  <div class="formHolder">
+    <h1 style="text-align: center">Register User</h1>
+    <form [formGroup]="registerForm" (ngSubmit)="registerSubmitForm()">
+      <ion-item>
+        <ion-label floating>First Name</ion-label>
+        <ion-input type="text" formControlName="fName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Last Name</ion-label>
+        <ion-input type="text" formControlName="lName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <button ion-button class="submitBtn" full type="submit" [disabled]="!registerForm.valid">Create Account</button>
+    </form>
+  </div>
+</ion-content>
